@@ -2,14 +2,20 @@
 
 let amigoSecreto = [];
 
-function amigoSecretoFunction() {
-    let listaAmigoSecreto = document.getElementById('amigo').value;
-    if (listaAmigoSecreto === '') {
-        alert('Por favor, ingrese un nombre');
-        return;
-    }
-    amigoSecreto.push(listaAmigoSecreto);
-    console.log(amigoSecreto);
-    return amigoSecreto;
-
+function agregarAmigo() {
+     let nombre = document.getElementById('amigo').value;
+     if (nombre === '') {
+        alert('Por favor, inserte un nombre.');
+     }
+     else if (amigoSecreto) {
+        amigoSecreto.push(nombre);
+        limpiarCaja();
+     console.log(nombre);
+     console.log(amigoSecreto);
+     return;
+     }
 };
+
+function limpiarCaja() {
+    document.getElementById('amigo').value = '';
+}
