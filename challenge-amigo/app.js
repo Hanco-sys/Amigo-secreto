@@ -4,12 +4,14 @@ let amigoSecreto = [];
 
 function agregarAmigo() {
      let nombre = document.getElementById('amigo').value;
+     // En caso de que se desee agregar un nombre sin haberse llenado el formulario, el sistema no lo agregara a la lista
      if (nombre === '') {
       document.getElementById('listaAmigos').innerHTML = `Por favor inserta un nombre`;;
      }
+     // agragamos el nombre a la lista
      else if (amigoSecreto) {
-        amigoSecreto.push(nombre);
-        limpiarCaja();
+        amigoSecreto.push(nombre); 
+        limpiarCaja(); 
      console.log(nombre);
      console.log(amigoSecreto);
        actualizarLista();
@@ -18,7 +20,7 @@ function agregarAmigo() {
 };
 
 function limpiarCaja() {
-    document.getElementById('amigo').value = '';
+    document.getElementById('amigo').value = ''; 
 }
 
 function actualizarLista() {
