@@ -36,7 +36,7 @@ function sortearAmigo() {
       alert('No hay amigos para sortear.');
    }
    else {
-      let amigoSorteado = amigoSecreto[Math.floor(Math.random() * amigoSecreto.length)+1];
+      let amigoSorteado = amigoSecreto[Math.floor(Math.random() * amigoSecreto.length)];
       document.getElementById('listaAmigos').innerHTML = `Tu amigo secreto es ${amigoSorteado}`;
    }
 }
